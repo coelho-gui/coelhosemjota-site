@@ -255,3 +255,126 @@ img, video { display: block; }
   .footer { padding: 40px 20px; flex-direction: column; align-items: flex-start; font-size: 10px; }
   .footer-links { gap: 18px; flex-wrap: wrap; }
 }
+/* Página interna — Brasilidades */
+
+.project-page {
+  min-height: 100vh;
+  background: #171717;
+  color: #ff1d14;
+  padding: 120px 24px 80px;
+}
+
+.project-header {
+  max-width: 1100px;
+  margin: 0 auto 80px;
+}
+
+.project-back {
+  display: inline-block;
+  margin-bottom: 80px;
+  font-family: "Space Mono", monospace;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.26em;
+  color: #ff1d14;
+  text-decoration: none;
+}
+
+.project-back:hover {
+  opacity: 0.7;
+}
+
+.project-kicker {
+  font-family: "Space Mono", monospace;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.32em;
+  margin-bottom: 16px;
+  color: #ff1d14;
+}
+
+.project-title {
+  font-family: "Archivo Black", sans-serif;
+  font-size: clamp(64px, 14vw, 180px);
+  line-height: 0.85;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 32px;
+  color: #ff1d14;
+}
+
+.project-description {
+  max-width: 680px;
+  font-family: "Space Mono", monospace;
+  font-size: 13px;
+  line-height: 1.8;
+  color: rgba(255, 29, 20, 0.85);
+}
+
+.project-hero {
+  width: 100%;
+  height: 80vh;
+  overflow: hidden;
+  margin-bottom: 80px;
+  background: #000;
+}
+
+.project-hero img,
+.project-hero video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.project-content {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  font-family: "Space Mono", monospace;
+  text-transform: uppercase;
+}
+
+.project-content p {
+  font-size: 10px;
+  letter-spacing: 0.26em;
+  opacity: 0.65;
+  margin-bottom: 8px;
+}
+
+.project-content strong {
+  font-size: 12px;
+  line-height: 1.5;
+  font-weight: 700;
+}
+
+/* Responsivo */
+
+@media (max-width: 768px) {
+  .project-page {
+    padding: 100px 20px 64px;
+  }
+
+  .project-header {
+    margin-bottom: 56px;
+  }
+
+  .project-back {
+    margin-bottom: 56px;
+  }
+
+  .project-title {
+    font-size: clamp(54px, 18vw, 96px);
+  }
+
+  .project-hero {
+    height: 55vh;
+    margin-bottom: 56px;
+  }
+
+  .project-content {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
