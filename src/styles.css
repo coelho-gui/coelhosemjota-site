@@ -88,7 +88,7 @@ img, video { display: block; }
   background: linear-gradient(to bottom, rgba(0,0,0,.2), transparent 55%, var(--bg));
 }
 
-.about-section { padding: 140px 96px; background: var(--bg); }
+.about-section { padding: 140px 140px; background: var(--bg); }
 .about-grid {
   max-width: 1152px;
   margin: 0 auto;
