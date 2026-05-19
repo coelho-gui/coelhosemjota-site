@@ -132,7 +132,7 @@ img, video { display: block; }
 
 .wide-image-section {
   position: relative;
-  height: 48vh;
+  height: 100vh;
   overflow: hidden;
 }
 .wide-image-section img { height: 100%; width: 100%; object-fit: cover; }
