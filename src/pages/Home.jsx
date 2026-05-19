@@ -19,6 +19,7 @@ const projects = [
     kicker: "Illustration / Visual Culture",
     image: "/images/projects/brasilidades.jpg",
     align: "left",
+    href: "/projetos/brasilidades",
   },
   {
     title: "ARGILA",
@@ -126,7 +127,7 @@ export default function Home() {
           {projects.map((project, index) => (
             <motion.a
               key={project.title}
-              href="#contato"
+              href={project.href}
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
