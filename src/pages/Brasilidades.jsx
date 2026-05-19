@@ -61,7 +61,7 @@ export default function Brasilidades() {
 
       <section className="project-hero">
         <img
-          src="/images/projects/brasilidades.jpg"
+          src="/images/projects/brasilidades/brasilidades-08.jpg"
           alt="Projeto Brasilidades"
         />
       </section>
