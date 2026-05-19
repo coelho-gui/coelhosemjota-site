@@ -109,7 +109,7 @@ export default function App() {
 
       <section className="wide-image-section">
         <img
-          src="/images/projects/argila.jpg"
+          src="/images/projects/middle_banner01.jpg"
           alt="Projeto Argila"
           className="image-treatment"
         />
