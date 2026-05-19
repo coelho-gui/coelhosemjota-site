@@ -154,7 +154,7 @@ export default function App() {
         >
           <h2 className="pixel-title big-word">Create</h2>
           <div className="creative-image">
-            <img src="/images/projects/brasilidades.jpg" alt="Create visual" className="image-treatment" />
+            <img src="/images/projects/create01.jpg" alt="Create visual" className="image-treatment" />
           </div>
         </motion.div>
 
@@ -167,7 +167,7 @@ export default function App() {
         >
           <p className="small-label right-label">creative hub</p>
           <div className="creative-image">
-            <img src="/images/projects/artlab.jpg" alt="Colors visual" className="image-treatment" />
+            <img src="/images/projects/colors01.jpg" alt="Colors visual" className="image-treatment" />
           </div>
           <h2 className="pixel-title big-word colors-word">Colors</h2>
         </motion.div>
