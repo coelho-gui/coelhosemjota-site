@@ -100,7 +100,7 @@ img, video { display: block; }
 .portrait-card {
   position: relative;
   overflow: hidden;
-  height: 260px;
+  height: 360px;
   background: rgba(127, 29, 29, .2);
 }
 .portrait-card img { height: 100%; width: 100%; object-fit: cover; }
