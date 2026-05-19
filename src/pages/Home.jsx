@@ -3,12 +3,12 @@ import { motion } from "framer-motion";
 
 const projects = [
   {
-    title: "KOBI",
-    kicker: "Branding / Campaign / Architecture",
-    image: "/images/projects/kobi.jpg",
-    align: "left",
-    href: "#contato",
-  },
+  title: "KOBI",
+  kicker: "Branding / Campaign / Architecture",
+  image: "/images/projects/kobi.jpg",
+  align: "left",
+  href: "/projetos/kobi",
+},
   {
     title: "ARTLAB.",
     kicker: "Creative Lab / fourlab.",
