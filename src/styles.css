@@ -69,7 +69,7 @@ img, video { display: block; }
 
 .hero-video-section {
   position: relative;
-  height: 50vh;
+  height: 70vh;
   width: 100%;
   overflow: hidden;
   background: #000;
