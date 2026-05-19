@@ -7,12 +7,14 @@ const projects = [
     kicker: "Branding / Campaign / Architecture",
     image: "/images/projects/kobi.jpg",
     align: "left",
+    href: "#contato",
   },
   {
     title: "ARTLAB.",
     kicker: "Creative Lab / fourlab.",
     image: "/images/projects/artlab.jpg",
     align: "right",
+    href: "#contato",
   },
   {
     title: "BRASILIDADES",
@@ -26,12 +28,14 @@ const projects = [
     kicker: "Product / Still / Materiality",
     image: "/images/projects/argila.jpg",
     align: "right",
+    href: "#contato",
   },
   {
     title: "PIZZA FUN",
     kicker: "Retail / Fashion / Lifestyle",
     image: "/images/projects/pizza-fun.jpg",
     align: "left",
+    href: "#contato",
   },
 ];
 
