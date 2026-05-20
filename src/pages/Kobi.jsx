@@ -68,8 +68,15 @@ export default function Kobi() {
       </header>
 
       <section className="project-hero">
-        <img src="/images/projects/kobi.jpg" alt="Projeto Kobi" />
-      </section>
+  <video
+    src="/videos/kobi/kobi-banner.mp4"
+    autoPlay
+    muted
+    loop
+    playsInline
+    aria-label="Vídeo de abertura do projeto Kobi"
+  />
+</section>
 
       <section className="project-content">
         <div>
