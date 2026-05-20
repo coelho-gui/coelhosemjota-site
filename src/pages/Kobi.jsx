@@ -105,18 +105,10 @@ export default function Kobi() {
 
           <p>
             A direção visual foi construída a partir da tensão entre atmosfera,
-            presença e desejo. O filme desenvolvido para as redes sociais de
-            Lucas Fernandes traduz a experiência do espaço em uma narrativa
+            presença e desejo. O filme desenvolvido para as redes sociais
+            Lucas Fernandes Arquitetos traduz a experiência do espaço em uma narrativa
             sensorial, onde luz baixa, recortes de cena, movimento e textura
             criam uma estética íntima, noturna e cinematográfica.
-          </p>
-
-          <p>
-            Mais do que apresentar um ambiente, a proposta foi construir uma
-            percepção: transformar o Kobi em imagem, ritmo e memória. Cada
-            enquadramento parte da relação entre corpo, objeto e lugar, criando
-            uma linguagem visual que aproxima arquitetura, lifestyle e direção
-            criativa em uma mesma narrativa.
           </p>
         </div>
       </section>
