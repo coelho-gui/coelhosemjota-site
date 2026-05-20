@@ -36,10 +36,12 @@ const kobiImages = [
 
 const kobiBottomImages = [
   {
-    src: "/images/projects/kobi/kobi-08.jpg",
-    alt: "Projeto Kobi 08",
+    type: "video",
+    src: "/videos/kobi/kobi-08.mp4",
+    alt: "Vídeo do projeto Kobi 08",
   },
   {
+    type: "image",
     src: "/images/projects/kobi/kobi-09.jpg",
     alt: "Projeto Kobi 09",
   },
@@ -115,11 +117,22 @@ export default function Kobi() {
 
       <section className="kobi-gallery-section">
         <div className="kobi-gallery">
-          {kobiBottomImages.map((image, index) => (
-            <figure key={index} className="kobi-gallery-item kobi-bottom-half">
-              <img src={image.src} alt={image.alt} />
-            </figure>
-          ))}
+          {kobiBottomImages.map((item, index) => (
+  <figure key={index} className="kobi-gallery-item kobi-bottom-half">
+    {item.type === "video" ? (
+      <video
+        src={item.src}
+        autoPlay
+        muted
+        loop
+        playsInline
+        aria-label={item.alt}
+      />
+    ) : (
+      <img src={item.src} alt={item.alt} />
+    )}
+  </figure>
+))}
         </div>
       </section>
     </main>
