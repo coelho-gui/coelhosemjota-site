@@ -96,16 +96,33 @@ export default function Kobi() {
               <img src={image.src} alt={image.alt} />
             </figure>
           ))}
+        </div>
+      </section>
 
-          <section className="kobi-text-block">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis
-              ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas
-              accumsan lacus vel facilisis.
-            </p>
-          </section>
+      <section className="kobi-text-block-full">
+        <div className="kobi-text-inner">
+          <p className="kobi-text-label">Direção visual / Social film</p>
 
+          <p>
+            A direção visual foi construída a partir da tensão entre atmosfera,
+            presença e desejo. O filme desenvolvido para as redes sociais de
+            Lucas Fernandes traduz a experiência do espaço em uma narrativa
+            sensorial, onde luz baixa, recortes de cena, movimento e textura
+            criam uma estética íntima, noturna e cinematográfica.
+          </p>
+
+          <p>
+            Mais do que apresentar um ambiente, a proposta foi construir uma
+            percepção: transformar o Kobi em imagem, ritmo e memória. Cada
+            enquadramento parte da relação entre corpo, objeto e lugar, criando
+            uma linguagem visual que aproxima arquitetura, lifestyle e direção
+            criativa em uma mesma narrativa.
+          </p>
+        </div>
+      </section>
+
+      <section className="kobi-gallery-section">
+        <div className="kobi-gallery">
           {kobiBottomImages.map((image, index) => (
             <figure key={index} className="kobi-gallery-item kobi-bottom-half">
               <img src={image.src} alt={image.alt} />
