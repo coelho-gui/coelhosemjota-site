@@ -569,3 +569,55 @@ img, video { display: block; }
     font-size: 12px;
   }
 }
+/* Bloco de texto full width — Kobi */
+
+.kobi-text-block-full {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  background: #ff3a24;
+  color: #171717;
+  min-height: 620px;
+  display: flex;
+  align-items: flex-end;
+  padding: 96px 24px;
+}
+
+.kobi-text-inner {
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+.kobi-text-label {
+  font-family: "Space Mono", monospace;
+  font-size: 10px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  margin-bottom: 32px;
+  color: #171717;
+}
+
+.kobi-text-inner p {
+  max-width: 760px;
+  font-family: "Space Mono", monospace;
+  font-size: 14px;
+  line-height: 1.8;
+  text-align: left;
+  color: #171717;
+}
+
+.kobi-text-inner p + p {
+  margin-top: 24px;
+}
+
+@media (max-width: 768px) {
+  .kobi-text-block-full {
+    min-height: 520px;
+    padding: 72px 20px;
+  }
+
+  .kobi-text-inner p {
+    font-size: 12px;
+    line-height: 1.75;
+  }
+}
