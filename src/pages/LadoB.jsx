@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 
 const ladoBProjects = [
@@ -20,6 +20,14 @@ const ladoBProjects = [
 ];
 
 export default function LadoB() {
+    useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "auto",
+    });
+  }, []);
+  
   return (
     <main className="lado-b-page">
       <header className="lado-b-nav">
