@@ -48,18 +48,12 @@ const argilaItems = [
     type: "image",
     src: "/images/projects/argila/argila-08.jpg",
     alt: "Projeto Argila 08",
-    className: "argila-third",
+    className: "argila-half",
   },
   {
     type: "image",
     src: "/images/projects/argila/argila-09.jpg",
     alt: "Projeto Argila 09",
-    className: "argila-two-thirds",
-  },
-  {
-    type: "image",
-    src: "/images/projects/argila/argila-10.jpg",
-    alt: "Projeto Argila 10",
     className: "argila-full",
   },
 ];
