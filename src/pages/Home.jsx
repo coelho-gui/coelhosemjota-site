@@ -32,12 +32,12 @@ const projects = [
   href: "/projetos/argila",
 },
   {
-    title: "PIZZA FUN",
-    kicker: "Retail / Fashion / Lifestyle",
-    image: "/images/projects/pizza-fun.jpg",
-    align: "left",
-    href: "#contato",
-  },
+  title: "PIZZA FUN",
+  kicker: "Retail / Fashion / Lifestyle",
+  image: "/images/projects/pizza-fun.jpg",
+  align: "left",
+  href: "/projetos/pizza-fun",
+},
 ];
 
 const fadeUp = {
