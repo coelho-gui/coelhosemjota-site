@@ -623,3 +623,174 @@ img, video { display: block; }
     line-height: 1.75;
   }
 }
+/* Página — Lado B */
+
+.lado-b-page {
+  min-height: 100vh;
+  background: #ff1d14;
+  color: #ffffff;
+  overflow-x: hidden;
+}
+
+.lado-b-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 40;
+  padding: 18px 48px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Space Mono", monospace;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+}
+
+.lado-b-nav a,
+.lado-b-brand,
+.lado-b-menu a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.lado-b-menu {
+  display: flex;
+  gap: 40px;
+}
+
+.lado-b-hero {
+  min-height: 92vh;
+  padding: 160px 48px 96px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.lado-b-kicker {
+  font-family: "Space Mono", monospace;
+  font-size: 12px;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+
+.lado-b-hero h1 {
+  max-width: 1180px;
+  font-family: "Archivo Black", sans-serif;
+  font-size: clamp(58px, 10vw, 160px);
+  line-height: 0.88;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+}
+
+.lado-b-hero p:not(.lado-b-kicker) {
+  max-width: 720px;
+  font-family: "Space Mono", monospace;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.lado-b-projects {
+  padding: 40px 48px 140px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+.lado-b-card {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  min-height: 420px;
+  border-top: 1px solid rgba(255, 255, 255, 0.35);
+  padding-top: 16px;
+}
+
+.lado-b-card-image {
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.16);
+}
+
+.lado-b-card-image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  filter: grayscale(1) contrast(1.15);
+  mix-blend-mode: screen;
+  transition: transform 0.8s ease, filter 0.8s ease;
+}
+
+.lado-b-card:hover img {
+  transform: scale(1.035);
+  filter: grayscale(0) contrast(1.05);
+}
+
+.lado-b-card-copy {
+  padding: 32px 0 32px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  font-family: "Space Mono", monospace;
+}
+
+.lado-b-card-copy span {
+  font-size: 11px;
+  letter-spacing: 0.28em;
+  margin-bottom: 24px;
+}
+
+.lado-b-card-copy h2 {
+  font-family: "Archivo Black", sans-serif;
+  font-size: clamp(36px, 6vw, 92px);
+  line-height: 0.9;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 24px;
+}
+
+.lado-b-card-copy p {
+  max-width: 460px;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+@media (max-width: 768px) {
+  .lado-b-nav {
+    padding: 16px 20px;
+    font-size: 10px;
+  }
+
+  .lado-b-menu {
+    gap: 18px;
+  }
+
+  .lado-b-hero {
+    min-height: 88vh;
+    padding: 120px 20px 72px;
+  }
+
+  .lado-b-hero h1 {
+    font-size: clamp(48px, 17vw, 82px);
+  }
+
+  .lado-b-projects {
+    padding: 24px 20px 96px;
+  }
+
+  .lado-b-card {
+    grid-template-columns: 1fr;
+    min-height: unset;
+  }
+
+  .lado-b-card-image {
+    height: 360px;
+  }
+
+  .lado-b-card-copy {
+    padding: 28px 0 48px;
+  }
+}
