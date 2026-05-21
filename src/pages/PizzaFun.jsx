@@ -97,8 +97,15 @@ export default function PizzaFun() {
       </header>
 
       <section className="project-hero">
-        <img src="/images/projects/pizza-fun.jpg" alt="Projeto Pizza Fun" />
-      </section>
+  <video
+    src="/videos/pizza-fun/pizza-fun-banner.mp4"
+    autoPlay
+    muted
+    loop
+    playsInline
+    aria-label="Vídeo de abertura do projeto Pizza Fun"
+  />
+</section>
 
       <section className="project-content">
         <div>
