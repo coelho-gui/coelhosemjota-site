@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const projects = [
   {
@@ -59,6 +60,7 @@ export default function Home() {
           <a href="#sobre" className="nav-link">sobre</a>
           <a href="#projetos" className="nav-link">projetos</a>
           <a href="#contato" className="nav-link">contato</a>
+          <Link to="/lado-b" className="nav-link">lado b</Link>
         </nav>
       </header>
 
