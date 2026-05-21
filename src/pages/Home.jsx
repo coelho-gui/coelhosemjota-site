@@ -49,18 +49,20 @@ const fadeUp = {
   },
 };
 
-export default function Home() {
-  const navigate = useNavigate();
-  const [isLeavingLadoB, setIsLeavingLadoB] = useState(false);
+function handleLadoBClick(event) {
+  event.preventDefault();
+  setIsLeavingLadoB(true);
 
-  function handleLadoBClick(event) {
-    event.preventDefault();
-    setIsLeavingLadoB(true);
+  setTimeout(() => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "auto",
+    });
 
-    setTimeout(() => {
-      navigate("/lado-b");
-    }, 750);
-  }
+    navigate("/lado-b");
+  }, 750);
+}
 
   return (
     <main className={`site-shell ${isLeavingLadoB ? "is-leaving-lado-b" : ""}`}>
