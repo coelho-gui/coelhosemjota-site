@@ -25,12 +25,12 @@ const projects = [
     href: "/projetos/brasilidades",
   },
   {
-    title: "ARGILA",
-    kicker: "Product / Still / Materiality",
-    image: "/images/projects/argila.jpg",
-    align: "right",
-    href: "#contato",
-  },
+  title: "ARGILA",
+  kicker: "Product / Still / Materiality",
+  image: "/images/projects/argila.jpg",
+  align: "right",
+  href: "/projetos/argila",
+},
   {
     title: "PIZZA FUN",
     kicker: "Retail / Fashion / Lifestyle",
