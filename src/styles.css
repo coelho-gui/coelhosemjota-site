@@ -818,7 +818,7 @@ img, video { display: block; }
 }
 
 .argila-gallery {
-  max-width: 760px;
+  max-width: 1180px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
