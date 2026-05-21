@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const projects = [
   {
@@ -50,9 +50,22 @@ const fadeUp = {
 };
 
 export default function Home() {
+  const navigate = useNavigate();
+  const [isLeavingLadoB, setIsLeavingLadoB] = useState(false);
+
+  function handleLadoBClick(event) {
+    event.preventDefault();
+    setIsLeavingLadoB(true);
+
+    setTimeout(() => {
+      navigate("/lado-b");
+    }, 750);
+  }
+
   return (
-    <main className="site-shell">
+    <main className={`site-shell ${isLeavingLadoB ? "is-leaving-lado-b" : ""}`}>
       <div className="grain" />
+      <div className={`lado-b-transition ${isLeavingLadoB ? "is-active" : ""}`} />
 
       <header className="header">
         <a href="#top" className="nav-link brand">coelhosemjota</a>
@@ -60,7 +73,9 @@ export default function Home() {
           <a href="#sobre" className="nav-link">sobre</a>
           <a href="#projetos" className="nav-link">projetos</a>
           <a href="#contato" className="nav-link">contato</a>
-          <Link to="/lado-b" className="nav-link">lado b</Link>
+          <button type="button" className="nav-link nav-button" onClick={handleLadoBClick}>
+    lado b
+  </button>
         </nav>
       </header>
 
