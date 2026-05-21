@@ -794,3 +794,38 @@ img, video { display: block; }
     padding: 28px 0 48px;
   }
 }
+/* Animação dos títulos dos projetos na home */
+
+.project-title {
+  display: inline-block;
+  transform-origin: center;
+  transition:
+    transform 0.45s cubic-bezier(0.16, 1, 0.3, 1),
+    letter-spacing 0.45s cubic-bezier(0.16, 1, 0.3, 1),
+    filter 0.45s ease;
+  will-change: transform, letter-spacing;
+}
+
+.project-strip:hover .project-title {
+  animation: title-stretch 0.85s ease-in-out infinite alternate;
+  letter-spacing: 0.12em;
+  filter: contrast(1.35);
+}
+
+@keyframes title-stretch {
+  0% {
+    transform: scaleX(1) scaleY(1);
+  }
+
+  45% {
+    transform: scaleX(1.08) scaleY(0.92);
+  }
+
+  70% {
+    transform: scaleX(0.96) scaleY(1.06);
+  }
+
+  100% {
+    transform: scaleX(1.12) scaleY(0.9);
+  }
+}
