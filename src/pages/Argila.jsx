@@ -79,8 +79,15 @@ export default function Argila() {
       </header>
 
       <section className="project-hero">
-        <img src="/images/projects/argila.jpg" alt="Projeto Argila" />
-      </section>
+  <video
+    src="/videos/argila/argila-banner.mp4"
+    autoPlay
+    muted
+    loop
+    playsInline
+    aria-label="Vídeo de abertura do projeto Argila"
+  />
+</section>
 
       <section className="project-content">
         <div>
