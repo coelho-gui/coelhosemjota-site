@@ -4,12 +4,12 @@ import { useNavigate } from "react-router-dom";
 
 const projects = [
   {
-  title: "KOBI",
-  kicker: "Branding / Campaign / Architecture",
-  image: "/images/projects/kobi.jpg",
-  align: "left",
-  href: "/projetos/kobi",
-},
+    title: "KOBI",
+    kicker: "Branding / Campaign / Architecture",
+    image: "/images/projects/kobi.jpg",
+    align: "left",
+    href: "/projetos/kobi",
+  },
   {
     title: "ARTLAB.",
     kicker: "Creative Lab / fourlab.",
@@ -25,19 +25,19 @@ const projects = [
     href: "/projetos/brasilidades",
   },
   {
-  title: "ARGILA",
-  kicker: "Product / Still / Materiality",
-  image: "/images/projects/argila.jpg",
-  align: "right",
-  href: "/projetos/argila",
-},
+    title: "ARGILA",
+    kicker: "Product / Still / Materiality",
+    image: "/images/projects/argila.jpg",
+    align: "right",
+    href: "/projetos/argila",
+  },
   {
-  title: "PIZZA FUN",
-  kicker: "Retail / Fashion / Lifestyle",
-  image: "/images/projects/pizza-fun.jpg",
-  align: "left",
-  href: "/projetos/pizza-fun",
-},
+    title: "PIZZA FUN",
+    kicker: "Retail / Fashion / Lifestyle",
+    image: "/images/projects/pizza-fun.jpg",
+    align: "left",
+    href: "/projetos/pizza-fun",
+  },
 ];
 
 const fadeUp = {
@@ -49,20 +49,24 @@ const fadeUp = {
   },
 };
 
-function handleLadoBClick(event) {
-  event.preventDefault();
-  setIsLeavingLadoB(true);
+export default function Home() {
+  const navigate = useNavigate();
+  const [isLeavingLadoB, setIsLeavingLadoB] = useState(false);
 
-  setTimeout(() => {
-    window.scrollTo({
-      top: 0,
-      left: 0,
-      behavior: "auto",
-    });
+  function handleLadoBClick(event) {
+    event.preventDefault();
+    setIsLeavingLadoB(true);
 
-    navigate("/lado-b");
-  }, 750);
-}
+    setTimeout(() => {
+      window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: "auto",
+      });
+
+      navigate("/lado-b");
+    }, 900);
+  }
 
   return (
     <main className={`site-shell ${isLeavingLadoB ? "is-leaving-lado-b" : ""}`}>
@@ -70,14 +74,30 @@ function handleLadoBClick(event) {
       <div className={`lado-b-transition ${isLeavingLadoB ? "is-active" : ""}`} />
 
       <header className="header">
-        <a href="#top" className="nav-link brand">coelhosemjota</a>
+        <a href="#top" className="nav-link brand">
+          coelhosemjota
+        </a>
+
         <nav className="nav">
-          <a href="#sobre" className="nav-link">sobre</a>
-          <a href="#projetos" className="nav-link">projetos</a>
-          <a href="#contato" className="nav-link">contato</a>
-          <button type="button" className="nav-link nav-button" onClick={handleLadoBClick}>
-    lado b
-  </button>
+          <a href="#sobre" className="nav-link">
+            sobre
+          </a>
+
+          <a href="#projetos" className="nav-link">
+            projetos
+          </a>
+
+          <a href="#contato" className="nav-link">
+            contato
+          </a>
+
+          <button
+            type="button"
+            className="nav-link nav-button"
+            onClick={handleLadoBClick}
+          >
+            lado b
+          </button>
         </nav>
       </header>
 
@@ -119,7 +139,13 @@ function handleLadoBClick(event) {
             className="about-copy"
           >
             <p className="small-label">sobre*</p>
-            <h1 className="pixel-title about-title">Creative<br />Director</h1>
+
+            <h1 className="pixel-title about-title">
+              Creative
+              <br />
+              Director
+            </h1>
+
             <p className="body-text">
               Designer e diretor criativo em movimento constante entre marca,
               espaço e cultura visual. Crio identidades, campanhas, narrativas e
@@ -157,11 +183,23 @@ function handleLadoBClick(event) {
               transition={{ duration: 0.55, delay: index * 0.05 }}
               className="project-strip"
             >
-              <img src={project.image} alt={project.title} className="image-treatment" />
+              <img
+                src={project.image}
+                alt={project.title}
+                className="image-treatment"
+              />
+
               <div className="project-overlay" />
-              <div className={`project-text ${project.align === "left" ? "project-left" : "project-right"}`}>
+
+              <div
+                className={`project-text ${
+                  project.align === "left" ? "project-left" : "project-right"
+                }`}
+              >
                 <span className="project-kicker">{project.kicker}</span>
-                <span className="pixel-title project-title">{project.title}</span>
+                <span className="pixel-title project-title">
+                  {project.title}
+                </span>
               </div>
             </motion.a>
           ))}
@@ -177,8 +215,13 @@ function handleLadoBClick(event) {
           className="creative-card"
         >
           <h2 className="pixel-title big-word">Create</h2>
+
           <div className="creative-image">
-            <img src="/images/projects/create01.jpg" alt="Create visual" className="image-treatment" />
+            <img
+              src="/images/projects/create01.jpg"
+              alt="Create visual"
+              className="image-treatment"
+            />
           </div>
         </motion.div>
 
@@ -190,18 +233,33 @@ function handleLadoBClick(event) {
           className="creative-card creative-card-offset"
         >
           <p className="small-label right-label">creative hub</p>
+
           <div className="creative-image">
-            <img src="/images/projects/colors01.jpg" alt="Colors visual" className="image-treatment" />
+            <img
+              src="/images/projects/colors01.jpg"
+              alt="Colors visual"
+              className="image-treatment"
+            />
           </div>
+
           <h2 className="pixel-title big-word colors-word">Colors</h2>
         </motion.div>
       </section>
 
       <footer id="contato" className="footer">
         <p>coelhosemjota © creative direction</p>
+
         <div className="footer-links">
           <a href="mailto:guilherme@coletivobioma.com.br">email</a>
-          <a href="https://www.instagram.com/coelhosemjota/" target="_blank" rel="noreferrer">instagram</a>
+
+          <a
+            href="https://www.instagram.com/coelhosemjota/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            instagram
+          </a>
+
           <a href="#top">topo</a>
         </div>
       </footer>
