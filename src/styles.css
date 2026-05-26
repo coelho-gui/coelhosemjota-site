@@ -694,69 +694,168 @@ img, video { display: block; }
   line-height: 1.8;
 }
 
-.lado-b-projects {
+/* Entrada suave do conteúdo */
+
+.lado-b-kicker,
+.lado-b-hero h1,
+.lado-b-hero p:not(.lado-b-kicker) {
+  opacity: 0;
+  transform: translateY(48px);
+  filter: blur(8px);
+  animation-name: lado-b-content-enter;
+  animation-duration: 1s;
+  animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+  animation-fill-mode: forwards;
+}
+
+.lado-b-kicker {
+  animation-delay: 0.45s;
+}
+
+.lado-b-hero h1 {
+  animation-delay: 0.6s;
+}
+
+.lado-b-hero p:not(.lado-b-kicker) {
+  animation-delay: 0.78s;
+}
+
+/* Galeria quadrada */
+
+.lado-b-gallery {
   padding: 40px 48px 140px;
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 16px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
 }
 
-.lado-b-card {
-  display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
-  min-height: 420px;
-  border-top: 1px solid rgba(255, 255, 255, 0.35);
-  padding-top: 16px;
-}
-
-.lado-b-card-image {
+.lado-b-gallery-item {
+  appearance: none;
+  border: 0;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+  aspect-ratio: 1 / 1;
   overflow: hidden;
-  background: rgba(255, 255, 255, 0.16);
 }
 
-.lado-b-card-image img {
+.lado-b-gallery-item img,
+.lado-b-gallery-item video {
   width: 100%;
   height: 100%;
   display: block;
   object-fit: cover;
-  filter: grayscale(1) contrast(1.15);
-  mix-blend-mode: screen;
-  transition: transform 0.8s ease, filter 0.8s ease;
+  transition:
+    transform 0.7s ease,
+    filter 0.7s ease;
 }
 
-.lado-b-card:hover img {
-  transform: scale(1.035);
-  filter: grayscale(0) contrast(1.05);
+.lado-b-gallery-item:hover img,
+.lado-b-gallery-item:hover video {
+  transform: scale(1.045);
+  filter: saturate(1.15) contrast(1.08);
 }
 
-.lado-b-card-copy {
-  padding: 32px 0 32px 40px;
+/* Lightbox */
+
+.lado-b-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background: rgba(17, 17, 17, 0.94);
   display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
+  align-items: center;
+  justify-content: center;
+  padding: 72px 104px;
+}
+
+.lado-b-lightbox-backdrop {
+  position: absolute;
+  inset: 0;
+}
+
+.lado-b-lightbox-content {
+  position: relative;
+  z-index: 2;
+  margin: 0;
+  width: min(82vw, 1280px);
+  height: min(78vh, 820px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lado-b-lightbox-content img,
+.lado-b-lightbox-content video {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.lado-b-lightbox-counter {
+  position: fixed;
+  top: 56px;
+  left: 48px;
+  z-index: 3;
+  margin: 0;
   font-family: "Space Mono", monospace;
+  font-size: 14px;
+  font-weight: 700;
+  color: #ff1d14;
 }
 
-.lado-b-card-copy span {
-  font-size: 11px;
-  letter-spacing: 0.28em;
-  margin-bottom: 24px;
+.lado-b-lightbox-close {
+  position: fixed;
+  top: 36px;
+  right: 48px;
+  z-index: 3;
+  appearance: none;
+  border: 0;
+  background: transparent;
+  color: #ff1d14;
+  font-size: 76px;
+  line-height: 1;
+  cursor: pointer;
 }
 
-.lado-b-card-copy h2 {
-  font-family: "Archivo Black", sans-serif;
-  font-size: clamp(36px, 6vw, 92px);
-  line-height: 0.9;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  margin-bottom: 24px;
+.lado-b-lightbox-arrow {
+  position: fixed;
+  top: 50%;
+  z-index: 3;
+  transform: translateY(-50%);
+  appearance: none;
+  border: 0;
+  background: transparent;
+  color: #ff1d14;
+  font-size: 72px;
+  line-height: 1;
+  cursor: pointer;
 }
 
-.lado-b-card-copy p {
-  max-width: 460px;
-  font-size: 13px;
-  line-height: 1.7;
+.lado-b-lightbox-prev {
+  left: 48px;
 }
+
+.lado-b-lightbox-next {
+  right: 48px;
+}
+
+@keyframes lado-b-content-enter {
+  from {
+    opacity: 0;
+    transform: translateY(48px);
+    filter: blur(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+/* Responsivo */
 
 @media (max-width: 768px) {
   .lado-b-nav {
@@ -777,21 +876,46 @@ img, video { display: block; }
     font-size: clamp(48px, 17vw, 82px);
   }
 
-  .lado-b-projects {
+  .lado-b-gallery {
     padding: 24px 20px 96px;
-  }
-
-  .lado-b-card {
     grid-template-columns: 1fr;
-    min-height: unset;
+    gap: 18px;
   }
 
-  .lado-b-card-image {
-    height: 360px;
+  .lado-b-lightbox {
+    padding: 64px 20px;
   }
 
-  .lado-b-card-copy {
-    padding: 28px 0 48px;
+  .lado-b-lightbox-content {
+    width: 100%;
+    height: 72vh;
+  }
+
+  .lado-b-lightbox-counter {
+    top: 24px;
+    left: 20px;
+    font-size: 12px;
+  }
+
+  .lado-b-lightbox-close {
+    top: 12px;
+    right: 20px;
+    font-size: 56px;
+  }
+
+  .lado-b-lightbox-arrow {
+    top: auto;
+    bottom: 24px;
+    transform: none;
+    font-size: 52px;
+  }
+
+  .lado-b-lightbox-prev {
+    left: 32px;
+  }
+
+  .lado-b-lightbox-next {
+    right: 32px;
   }
 }
 /* Projetos — título contrai no hover */
