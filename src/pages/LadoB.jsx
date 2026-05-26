@@ -183,3 +183,37 @@ export default function LadoB() {
     </main>
   );
 }
+.lado-b-vinyl {
+  position: fixed;
+  right: 36px;
+  bottom: 36px;
+  width: 160px;
+  height: 160px;
+  z-index: 20;
+  pointer-events: none;
+  opacity: 0.95;
+}
+
+.lado-b-vinyl img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  animation: vinyl-spin 8s linear infinite;
+}
+
+@keyframes vinyl-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+@media (max-width: 768px) {
+  .lado-b-vinyl {
+    width: 92px;
+    height: 92px;
+    right: 16px;
+    bottom: 16px;
+  }
