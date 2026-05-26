@@ -215,7 +215,7 @@ video {
 
 .project-strip {
   position: relative;
-  height: 180px;
+  height: 220px;
   overflow: hidden;
   border-top: 1px solid rgba(255, 29, 20, .1);
   border-bottom: 1px solid rgba(255, 29, 20, .1);
@@ -248,7 +248,7 @@ video {
 
 .project-text {
   position: absolute;
-  top: 20px;
+  bottom: 22px;
 }
 
 .project-left {
@@ -272,9 +272,11 @@ video {
 }
 
 .project-title {
-  display: block;
-  font-size: 40px;
-  line-height: 1;
+  display: inline-block;
+  font-size: clamp(82px, 13vw, 220px);
+  line-height: 0.78;
+  letter-spacing: 0.02em;
+  transform-origin: center;
 }
 
 .creative-grid-section {
