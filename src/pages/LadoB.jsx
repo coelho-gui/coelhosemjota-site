@@ -73,6 +73,10 @@ export default function LadoB() {
 
   return (
     <main className="lado-b-page">
+      <div className="lado-b-vinyl">
+    <img src="/images/vinyl.png" alt="Disco de vinil girando" />
+  </div>
+      
       <header className="lado-b-nav">
         <Link to="/" className="lado-b-brand">
           coelhosemjota
