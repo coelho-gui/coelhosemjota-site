@@ -1211,8 +1211,6 @@ img, video { display: block; }
   animation: lado-b-page-enter 0.45s ease both;
 }
 
-/* Entrada suave da página Lado B */
-
 .lado-b-kicker,
 .lado-b-hero h1,
 .lado-b-hero p:not(.lado-b-kicker) {
@@ -1237,32 +1235,6 @@ img, video { display: block; }
   animation-delay: 0.78s;
 }
 
-@keyframes lado-b-content-enter {
-  from {
-    opacity: 0;
-    transform: translateY(48px);
-    filter: blur(8px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-    filter: blur(0);
-  }
-}
-
-.lado-b-kicker {
-  animation-delay: 0.18s;
-}
-
-.lado-b-hero h1 {
-  animation-delay: 0.28s;
-}
-
-.lado-b-hero p:not(.lado-b-kicker) {
-  animation-delay: 0.42s;
-}
-
 @keyframes lado-b-page-enter {
   from {
     background: #ff1d14;
@@ -1276,8 +1248,8 @@ img, video { display: block; }
 @keyframes lado-b-content-enter {
   from {
     opacity: 0;
-    transform: translateY(28px);
-    filter: blur(6px);
+    transform: translateY(48px);
+    filter: blur(8px);
   }
 
   to {
