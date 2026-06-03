@@ -18,6 +18,7 @@ export default function App() {
         <Route path="/projetos/kobi" element={<Kobi />} />
         <Route path="/projetos/argila" element={<Argila />} />
         <Route path="/projetos/pizza-fun" element={<PizzaFun />} />
+        <Route path="/projetos/start" element={<Start />} />
         <Route path="/lado-b" element={<LadoB />} />
       </Routes>
     </BrowserRouter>
