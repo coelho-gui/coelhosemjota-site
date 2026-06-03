@@ -1,22 +1,75 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const startItems = [
-  { src: "/images/projects/start/start-01.jpg", alt: "Projeto START 01", className: "start-full start-banner" },
-  { src: "/images/projects/start/start-02.jpg", alt: "Projeto START 02", className: "start-short start-block" },
-  { src: "/images/projects/start/start-03.jpg", alt: "Projeto START 03", className: "start-long start-block" },
-  { src: "/images/projects/start/start-04.jpg", alt: "Projeto START 04", className: "start-third start-small" },
-  { src: "/images/projects/start/start-05.jpg", alt: "Projeto START 05", className: "start-third start-small" },
-  { src: "/images/projects/start/start-06.jpg", alt: "Projeto START 06", className: "start-third start-small" },
-  { src: "/images/projects/start/start-07.jpg", alt: "Projeto START 07", className: "start-big-left" },
-  { type: "text", className: "start-text-block" },
-  { src: "/images/projects/start/start-08.jpg", alt: "Projeto START 08", className: "start-full start-thin-banner" },
-  { src: "/images/projects/start/start-09.jpg", alt: "Projeto START 09", className: "start-full start-wide-photo" },
-  { src: "/images/projects/start/start-10.jpg", alt: "Projeto START 10", className: "start-half start-vertical" },
-  { src: "/images/projects/start/start-11.jpg", alt: "Projeto START 11", className: "start-half start-vertical" },
-  { src: "/images/projects/start/start-12.jpg", alt: "Projeto START 12", className: "start-third start-product" },
-  { src: "/images/projects/start/start-13.jpg", alt: "Projeto START 13", className: "start-third start-product" },
-  { src: "/images/projects/start/start-14.jpg", alt: "Projeto START 14", className: "start-third start-product" },
+const startTopImages = [
+  {
+    src: "/images/projects/start/start-01.jpg",
+    alt: "Projeto Start 01",
+    className: "start-full start-logo-banner",
+  },
+  {
+    src: "/images/projects/start/start-02.jpg",
+    alt: "Projeto Start 02",
+    className: "start-half start-medium-block",
+  },
+  {
+    src: "/images/projects/start/start-03.jpg",
+    alt: "Projeto Start 03",
+    className: "start-half start-medium-block",
+  },
+  {
+    src: "/images/projects/start/start-04.jpg",
+    alt: "Projeto Start 04",
+    className: "start-third start-small-block",
+  },
+  {
+    src: "/images/projects/start/start-05.jpg",
+    alt: "Projeto Start 05",
+    className: "start-third start-small-block",
+  },
+  {
+    src: "/images/projects/start/start-06.jpg",
+    alt: "Projeto Start 06",
+    className: "start-third start-small-block",
+  },
+];
+
+const startBottomImages = [
+  {
+    src: "/images/projects/start/start-08.jpg",
+    alt: "Projeto Start 08",
+    className: "start-full start-strip",
+  },
+  {
+    src: "/images/projects/start/start-09.jpg",
+    alt: "Projeto Start 09",
+    className: "start-full start-photo-wide",
+  },
+  {
+    src: "/images/projects/start/start-10.jpg",
+    alt: "Projeto Start 10",
+    className: "start-half start-photo-tall",
+  },
+  {
+    src: "/images/projects/start/start-11.jpg",
+    alt: "Projeto Start 11",
+    className: "start-half start-photo-tall",
+  },
+  {
+    src: "/images/projects/start/start-12.jpg",
+    alt: "Projeto Start 12",
+    className: "start-third start-product",
+  },
+  {
+    src: "/images/projects/start/start-13.jpg",
+    alt: "Projeto Start 13",
+    className: "start-third start-product",
+  },
+  {
+    src: "/images/projects/start/start-14.jpg",
+    alt: "Projeto Start 14",
+    className: "start-third start-product",
+  },
 ];
 
 export default function Start() {
@@ -29,21 +82,20 @@ export default function Start() {
 
         <p className="project-kicker">Identity / Running / Community</p>
 
-        <h1 className="project-title">START</h1>
+        <h1 className="project-title">Start</h1>
 
         <p className="project-description">
-          START é um projeto de identidade visual e estamparia criado para o
-          lançamento do grupo de corrida da Surf Track. A proposta nasce do
-          encontro entre esporte, cidade e comunidade: primeiro, conectando os
-          principais pontos de corrida de São José do Rio Preto em camisetas
-          ilustradas; depois, evoluindo para uma fase mais humana, colorida e
-          coletiva, com corredores diversos, movimento e a presença da FILA como
-          patrocinadora do projeto.
+          Projeto de identidade visual e estamparia desenvolvido para o
+          lançamento do grupo de corrida da Surf Track. A primeira fase conecta
+          os principais pontos de corrida de São José do Rio Preto em ilustrações
+          aplicadas às camisetas. A segunda fase amplia a narrativa para as
+          pessoas: corredores diversos, tênis em movimento, comunidade e energia
+          coletiva em uma fase mais colorida, viva e madura do Start.
         </p>
       </header>
 
       <section className="project-hero">
-        <img src="/images/projects/start/start-01.jpg" alt="Projeto START" />
+        <img src="/images/projects/start/start-09.jpg" alt="Projeto Start" />
       </section>
 
       <section className="project-content">
@@ -65,28 +117,38 @@ export default function Start() {
 
       <section className="start-gallery-section">
         <div className="start-gallery">
-          {startItems.map((item, index) => {
-            if (item.type === "text") {
-              return (
-                <div key={`text-${index}`} className={item.className}>
-                  <p>
-                    A primeira fase traduz a cidade como mapa afetivo da corrida:
-                    pontos de encontro, percursos e símbolos urbanos aparecem nas
-                    estampas como uma forma de conectar pessoas pelo movimento. A
-                    segunda fase acompanha o amadurecimento do grupo, trazendo mais
-                    cor, velocidade e diversidade para celebrar a comunidade que se
-                    formou ao longo dos meses.
-                  </p>
-                </div>
-              );
-            }
+          {startTopImages.map((image, index) => (
+            <figure
+              key={index}
+              className={`start-gallery-item ${image.className}`}
+            >
+              <img src={image.src} alt={image.alt} />
+            </figure>
+          ))}
 
-            return (
-              <figure key={item.src} className={`start-gallery-item ${item.className}`}>
-                <img src={item.src} alt={item.alt} />
-              </figure>
-            );
-          })}
+          <figure className="start-gallery-item start-big-photo">
+            <img src="/images/projects/start/start-07.jpg" alt="Projeto Start 07" />
+          </figure>
+
+          <section className="start-text-block">
+            <p>
+              A primeira fase traduz a cidade como mapa afetivo da corrida:
+              pontos de encontro, percursos e símbolos urbanos aparecem nas
+              estampas como uma forma de conectar pessoas pelo movimento. A
+              segunda fase acompanha o amadurecimento do grupo, trazendo mais
+              cor, velocidade e diversidade para celebrar a comunidade que se
+              formou ao longo dos meses.
+            </p>
+          </section>
+
+          {startBottomImages.map((image, index) => (
+            <figure
+              key={index}
+              className={`start-gallery-item ${image.className}`}
+            >
+              <img src={image.src} alt={image.alt} />
+            </figure>
+          ))}
         </div>
       </section>
     </main>
