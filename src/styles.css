@@ -1544,31 +1544,31 @@ video {
 /* Linha 1 */
 
 .start-logo-banner {
-  height: 150px;
+  height: 230px;
 }
 
 /* Linha 2 */
 
 .start-medium-block {
-  height: 260px;
+  height: 390px;
 }
 
 /* Linha 3 */
 
 .start-small-block {
-  height: 220px;
+  height: 320px;
 }
 
 /* Linha 4: start-07 + texto */
 
 .start-big-photo {
   grid-column: span 8;
-  height: 520px;
+  height: 680px;
 }
 
 .start-text-block {
   grid-column: span 4;
-  min-height: 520px;
+  min-height: 680px;
   padding: 40px 28px;
   background: #171717;
   color: #ff1d14;
@@ -1577,29 +1577,20 @@ video {
   font-family: "Space Mono", monospace;
 }
 
-.start-text-block p {
-  margin: 0;
-  font-size: 11px;
-  line-height: 1.65;
-  letter-spacing: -0.02em;
-}
-
-/* Continuação */
-
 .start-strip {
-  height: 170px;
+  height: 230px;
 }
 
 .start-photo-wide {
-  height: 460px;
+  height: 560px;
 }
 
 .start-photo-tall {
-  height: 420px;
+  height: 560px;
 }
 
 .start-product {
-  height: 300px;
+  height: 380px;
 }
 
 .project-page .project-hero img[src*="start"] {
