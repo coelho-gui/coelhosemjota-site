@@ -1496,7 +1496,7 @@ video {
 }
 
 .start-gallery {
-  max-width: 1080px;
+  max-width: 1180px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
