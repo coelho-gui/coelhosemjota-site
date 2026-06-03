@@ -10,12 +10,12 @@ const startTopImages = [
   {
     src: "/images/projects/start/start-02.jpg",
     alt: "Projeto Start 02",
-    className: "start-half start-medium-block",
+    className: "start-five start-medium-block",
   },
   {
     src: "/images/projects/start/start-03.jpg",
     alt: "Projeto Start 03",
-    className: "start-half start-medium-block",
+    className: "start-seven start-medium-block",
   },
   {
     src: "/images/projects/start/start-04.jpg",
