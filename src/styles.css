@@ -1641,3 +1641,46 @@ video {
     padding: 56px 24px;
   }
 }
+.start-logo-banner {
+  height: 230px;
+}
+
+.start-medium-block {
+  height: 390px;
+}
+
+.start-small-block {
+  height: 320px;
+}
+
+.start-big-photo {
+  grid-column: span 8;
+  height: 680px;
+}
+
+.start-text-block {
+  grid-column: span 4;
+  min-height: 680px;
+  padding: 40px 28px;
+  background: #171717;
+  color: #ff1d14;
+  display: flex;
+  align-items: flex-end;
+  font-family: "Space Mono", monospace;
+}
+
+.start-strip {
+  height: 230px;
+}
+
+.start-photo-wide {
+  height: 560px;
+}
+
+.start-photo-tall {
+  height: 560px;
+}
+
+.start-product {
+  height: 380px;
+}
