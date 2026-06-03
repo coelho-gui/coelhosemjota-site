@@ -1541,27 +1541,25 @@ video {
   grid-column: span 4;
 }
 
-.start-small {
-  grid-column: span 4;
-}
-
-.start-large {
-  grid-column: span 8;
-}
-
-/* Alturas seguindo o layout do PDF */
+/* Linha 1 */
 
 .start-logo-banner {
   height: 150px;
 }
 
+/* Linha 2 */
+
 .start-medium-block {
-  height: 240px;
+  height: 260px;
 }
+
+/* Linha 3 */
 
 .start-small-block {
   height: 220px;
 }
+
+/* Linha 4: start-07 + texto */
 
 .start-big-photo {
   grid-column: span 8;
@@ -1586,6 +1584,8 @@ video {
   letter-spacing: -0.02em;
 }
 
+/* Continuação */
+
 .start-strip {
   height: 170px;
 }
@@ -1601,8 +1601,6 @@ video {
 .start-product {
   height: 300px;
 }
-
-/* Ajuste específico do banner inicial da página Start */
 
 .project-page .project-hero img[src*="start"] {
   object-position: center;
@@ -1624,8 +1622,6 @@ video {
   .start-full,
   .start-half,
   .start-third,
-  .start-small,
-  .start-large,
   .start-big-photo,
   .start-text-block {
     grid-column: span 1;
