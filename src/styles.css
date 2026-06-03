@@ -1541,34 +1541,42 @@ video {
   grid-column: span 4;
 }
 
-/* Linha 1 */
-
-.start-logo-banner {
-  height: 230px;
+.start-five {
+  grid-column: span 5;
 }
 
-/* Linha 2 */
+.start-seven {
+  grid-column: span 7;
+}
+
+/* Linha 1 — start-01 */
+
+.start-logo-banner {
+  height: 240px;
+}
+
+/* Linha 2 — start-02 / start-03 */
 
 .start-medium-block {
+  height: 460px;
+}
+
+/* Linha 3 — start-04 / start-05 / start-06 */
+
+.start-small-block {
   height: 390px;
 }
 
-/* Linha 3 */
-
-.start-small-block {
-  height: 320px;
-}
-
-/* Linha 4: start-07 + texto */
+/* Linha 4 — start-07 + texto */
 
 .start-big-photo {
   grid-column: span 8;
-  height: 680px;
+  height: 720px;
 }
 
 .start-text-block {
   grid-column: span 4;
-  min-height: 680px;
+  min-height: 720px;
   padding: 40px 28px;
   background: #171717;
   color: #ff1d14;
@@ -1577,21 +1585,66 @@ video {
   font-family: "Space Mono", monospace;
 }
 
+.start-text-block p {
+  margin: 0;
+  font-size: 11px;
+  line-height: 1.65;
+  letter-spacing: -0.02em;
+}
+
+/* Continuação do projeto */
+
 .start-strip {
-  height: 230px;
+  height: 260px;
 }
 
 .start-photo-wide {
-  height: 560px;
+  height: 620px;
 }
 
 .start-photo-tall {
-  height: 560px;
+  height: 600px;
 }
 
 .start-product {
-  height: 380px;
+  height: 420px;
 }
+
+/* Ajustes de enquadramento */
+
+.start-logo-banner img {
+  object-fit: cover;
+  object-position: center;
+}
+
+.start-medium-block img {
+  object-fit: cover;
+  object-position: center;
+}
+
+.start-small-block img {
+  object-fit: cover;
+  object-position: center;
+}
+
+.start-big-photo img {
+  object-fit: cover;
+  object-position: center;
+}
+
+.start-strip img {
+  object-fit: cover;
+  object-position: center;
+}
+
+.start-photo-wide img,
+.start-photo-tall img,
+.start-product img {
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Banner inicial da página Start */
 
 .project-page .project-hero img[src*="start"] {
   object-position: center;
@@ -1613,6 +1666,8 @@ video {
   .start-full,
   .start-half,
   .start-third,
+  .start-five,
+  .start-seven,
   .start-big-photo,
   .start-text-block {
     grid-column: span 1;
@@ -1640,47 +1695,4 @@ video {
     min-height: 360px;
     padding: 56px 24px;
   }
-}
-.start-logo-banner {
-  height: 230px;
-}
-
-.start-medium-block {
-  height: 390px;
-}
-
-.start-small-block {
-  height: 320px;
-}
-
-.start-big-photo {
-  grid-column: span 8;
-  height: 680px;
-}
-
-.start-text-block {
-  grid-column: span 4;
-  min-height: 680px;
-  padding: 40px 28px;
-  background: #171717;
-  color: #ff1d14;
-  display: flex;
-  align-items: flex-end;
-  font-family: "Space Mono", monospace;
-}
-
-.start-strip {
-  height: 230px;
-}
-
-.start-photo-wide {
-  height: 560px;
-}
-
-.start-photo-tall {
-  height: 560px;
-}
-
-.start-product {
-  height: 380px;
 }
