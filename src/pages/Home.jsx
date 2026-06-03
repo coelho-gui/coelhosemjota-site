@@ -11,12 +11,12 @@ const projects = [
     href: "/projetos/kobi",
   },
   {
-    title: "ARTLAB.",
-    kicker: "Creative Lab / fourlab.",
-    image: "/images/projects/artlab.jpg",
-    align: "right",
-    href: "#contato",
-  },
+  title: "START",
+  kicker: "Identity / Running / Community",
+  image: "/images/projects/start/start-08.jpg",
+  align: "right",
+  href: "/projetos/start",
+},
   {
     title: "BRASILIDADES",
     kicker: "Illustration / Visual Culture",
