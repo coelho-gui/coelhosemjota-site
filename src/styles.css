@@ -1487,3 +1487,170 @@ video {
   transform: scaleX(0.82);
   letter-spacing: -0.02em;
 }
+/* Página interna — START */
+
+.start-gallery-section {
+  width: 100%;
+  padding: 40px 0 120px;
+  background: #171717;
+}
+
+.start-gallery {
+  max-width: 980px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 8px;
+  padding: 0 24px;
+}
+
+.start-gallery-item {
+  margin: 0;
+  overflow: hidden;
+  background: #000;
+}
+
+.start-gallery-item img,
+.start-gallery-item video {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transition:
+    transform 0.8s ease,
+    filter 0.8s ease;
+}
+
+.start-gallery-item:hover img,
+.start-gallery-item:hover video {
+  transform: scale(1.035);
+  filter: saturate(1.08) contrast(1.06);
+}
+
+/* Larguras */
+
+.start-full {
+  grid-column: span 12;
+}
+
+.start-half {
+  grid-column: span 6;
+}
+
+.start-third {
+  grid-column: span 4;
+}
+
+.start-small {
+  grid-column: span 4;
+}
+
+.start-large {
+  grid-column: span 8;
+}
+
+/* Alturas seguindo o layout do PDF */
+
+.start-logo-banner {
+  height: 150px;
+}
+
+.start-medium-block {
+  height: 240px;
+}
+
+.start-small-block {
+  height: 220px;
+}
+
+.start-big-photo {
+  grid-column: span 8;
+  height: 520px;
+}
+
+.start-text-block {
+  grid-column: span 4;
+  min-height: 520px;
+  padding: 40px 28px;
+  background: #171717;
+  color: #ff1d14;
+  display: flex;
+  align-items: flex-end;
+  font-family: "Space Mono", monospace;
+}
+
+.start-text-block p {
+  margin: 0;
+  font-size: 11px;
+  line-height: 1.65;
+  letter-spacing: -0.02em;
+}
+
+.start-strip {
+  height: 170px;
+}
+
+.start-photo-wide {
+  height: 460px;
+}
+
+.start-photo-tall {
+  height: 420px;
+}
+
+.start-product {
+  height: 300px;
+}
+
+/* Ajuste específico do banner inicial da página Start */
+
+.project-page .project-hero img[src*="start"] {
+  object-position: center;
+}
+
+/* Responsivo */
+
+@media (max-width: 768px) {
+  .start-gallery-section {
+    padding: 24px 0 80px;
+  }
+
+  .start-gallery {
+    grid-template-columns: 1fr;
+    gap: 8px;
+    padding: 0 16px;
+  }
+
+  .start-full,
+  .start-half,
+  .start-third,
+  .start-small,
+  .start-large,
+  .start-big-photo,
+  .start-text-block {
+    grid-column: span 1;
+  }
+
+  .start-logo-banner,
+  .start-medium-block,
+  .start-small-block,
+  .start-big-photo,
+  .start-strip,
+  .start-photo-wide,
+  .start-photo-tall,
+  .start-product {
+    height: auto;
+    min-height: unset;
+  }
+
+  .start-gallery-item img,
+  .start-gallery-item video {
+    height: auto;
+    object-fit: contain;
+  }
+
+  .start-text-block {
+    min-height: 360px;
+    padding: 56px 24px;
+  }
+}
