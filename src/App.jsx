@@ -5,6 +5,7 @@ import Brasilidades from "./pages/Brasilidades";
 import Kobi from "./pages/Kobi";
 import Argila from "./pages/Argila";
 import PizzaFun from "./pages/PizzaFun";
+import Start from "./pages/Start";
 import LadoB from "./pages/LadoB";
 import "./styles.css";
 
