@@ -3,77 +3,105 @@ import { Link } from "react-router-dom";
 
 const startTopImages = [
   {
+    type: "image",
     src: "/images/projects/start/start-01.jpg",
     alt: "Projeto Start 01",
     className: "start-full start-logo-banner",
   },
   {
-  type: "video",
-  src: "/videos/start/start-02.mp4",
-  alt: "Projeto Start 02",
-  className: "start-five start-medium-block",
-},
+    type: "video",
+    src: "/videos/start/start-02.mp4",
+    alt: "Projeto Start 02",
+    className: "start-five start-medium-block",
+  },
   {
+    type: "image",
     src: "/images/projects/start/start-03.jpg",
     alt: "Projeto Start 03",
     className: "start-seven start-medium-block",
   },
   {
-  type: "video",
-  src: "/videos/start/start-04.mp4",
-  alt: "Projeto Start 04",
-  className: "start-third start-small-block",
-},
+    type: "video",
+    src: "/videos/start/start-04.mp4",
+    alt: "Projeto Start 04",
+    className: "start-third start-small-block",
+  },
   {
+    type: "image",
     src: "/images/projects/start/start-05.jpg",
     alt: "Projeto Start 05",
     className: "start-third start-small-block",
   },
   {
-  type: "video",
-  src: "/videos/start/start-06.mp4",
-  alt: "Projeto Start 06",
-  className: "start-third start-small-block",
-},
+    type: "video",
+    src: "/videos/start/start-06.mp4",
+    alt: "Projeto Start 06",
+    className: "start-third start-small-block",
+  },
 ];
 
 const startBottomImages = [
   {
+    type: "image",
     src: "/images/projects/start/start-08.jpg",
     alt: "Projeto Start 08",
     className: "start-full start-strip",
   },
   {
+    type: "image",
     src: "/images/projects/start/start-09.jpg",
     alt: "Projeto Start 09",
     className: "start-full start-photo-wide",
   },
   {
+    type: "image",
     src: "/images/projects/start/start-10.jpg",
     alt: "Projeto Start 10",
     className: "start-half start-photo-tall",
   },
   {
+    type: "image",
     src: "/images/projects/start/start-11.jpg",
     alt: "Projeto Start 11",
     className: "start-half start-photo-tall",
   },
   {
+    type: "image",
     src: "/images/projects/start/start-12.jpg",
     alt: "Projeto Start 12",
     className: "start-third start-product",
   },
   {
+    type: "image",
     src: "/images/projects/start/start-13.jpg",
     alt: "Projeto Start 13",
     className: "start-third start-product",
   },
   {
+    type: "image",
     src: "/images/projects/start/start-14.jpg",
     alt: "Projeto Start 14",
     className: "start-third start-product",
   },
 ];
+
+function StartMedia({ item }) {
+  if (item.type === "video") {
+    return (
+      <video
+        src={item.src}
+        autoPlay
+        muted
+        loop
+        playsInline
+        preload="metadata"
+        aria-label={item.alt}
+      />
+    );
+  }
+
+  return <img src={item.src} alt={item.alt} />;
+}
 
 export default function Start() {
   return (
@@ -120,17 +148,20 @@ export default function Start() {
 
       <section className="start-gallery-section">
         <div className="start-gallery">
-          {startTopImages.map((image, index) => (
+          {startTopImages.map((item, index) => (
             <figure
               key={index}
-              className={`start-gallery-item ${image.className}`}
+              className={`start-gallery-item ${item.className}`}
             >
-              <img src={image.src} alt={image.alt} />
+              <StartMedia item={item} />
             </figure>
           ))}
 
           <figure className="start-gallery-item start-big-photo">
-            <img src="/images/projects/start/start-07.jpg" alt="Projeto Start 07" />
+            <img
+              src="/images/projects/start/start-07.jpg"
+              alt="Projeto Start 07"
+            />
           </figure>
 
           <section className="start-text-block">
@@ -144,12 +175,12 @@ export default function Start() {
             </p>
           </section>
 
-          {startBottomImages.map((image, index) => (
+          {startBottomImages.map((item, index) => (
             <figure
               key={index}
-              className={`start-gallery-item ${image.className}`}
+              className={`start-gallery-item ${item.className}`}
             >
-              <img src={image.src} alt={image.alt} />
+              <StartMedia item={item} />
             </figure>
           ))}
         </div>
