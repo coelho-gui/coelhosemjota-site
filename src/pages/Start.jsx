@@ -8,30 +8,33 @@ const startTopImages = [
     className: "start-full start-logo-banner",
   },
   {
-    src: "/images/projects/start/start-02.jpg",
-    alt: "Projeto Start 02",
-    className: "start-five start-medium-block",
-  },
+  type: "video",
+  src: "/videos/start/start-02.mp4",
+  alt: "Projeto Start 02",
+  className: "start-five start-medium-block",
+},
   {
     src: "/images/projects/start/start-03.jpg",
     alt: "Projeto Start 03",
     className: "start-seven start-medium-block",
   },
   {
-    src: "/images/projects/start/start-04.jpg",
-    alt: "Projeto Start 04",
-    className: "start-third start-small-block",
-  },
+  type: "video",
+  src: "/videos/start/start-04.mp4",
+  alt: "Projeto Start 04",
+  className: "start-third start-small-block",
+},
   {
     src: "/images/projects/start/start-05.jpg",
     alt: "Projeto Start 05",
     className: "start-third start-small-block",
   },
   {
-    src: "/images/projects/start/start-06.jpg",
-    alt: "Projeto Start 06",
-    className: "start-third start-small-block",
-  },
+  type: "video",
+  src: "/videos/start/start-06.mp4",
+  alt: "Projeto Start 06",
+  className: "start-third start-small-block",
+},
 ];
 
 const startBottomImages = [
