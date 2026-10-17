@@ -1897,7 +1897,7 @@ video {
 /* Ajuste de posicionamento — BRASILIDADES na Home */
 
 .project-strip:has(img[src*="brasilidades"]) .project-text {
-  left: 25%;
+  left: 45%;
   right: auto;
   transform: translateX(-50%);
   width: max-content;
@@ -1907,7 +1907,7 @@ video {
 }
 
 .project-strip:has(img[src*="brasilidades"]) .project-title {
-  font-size: clamp(100px, 8vw, 125px);
+  font-size: clamp(140px, 8vw, 125px);
   white-space: nowrap;
 }
 
