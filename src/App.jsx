@@ -6,6 +6,7 @@ import Kobi from "./pages/Kobi";
 import Argila from "./pages/Argila";
 import PizzaFun from "./pages/PizzaFun";
 import Start from "./pages/Start";
+import Biocity from "./pages/Biocity";
 import LadoB from "./pages/LadoB";
 import "./styles.css";
 
@@ -19,6 +20,7 @@ export default function App() {
         <Route path="/projetos/argila" element={<Argila />} />
         <Route path="/projetos/pizza-fun" element={<PizzaFun />} />
         <Route path="/projetos/start" element={<Start />} />
+        <Route path="/projetos/biocity" element={<Biocity />} />
         <Route path="/lado-b" element={<LadoB />} />
       </Routes>
     </BrowserRouter>
