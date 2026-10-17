@@ -1,41 +1,49 @@
+
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 
 const projects = [
   {
+    title: "BIOCITY CLUB",
+    kicker: "Wayfinding / Environmental Design / Architecture",
+    image: "/images/projects/biocity/biocity-banner.jpg",
+    align: "left",
+    href: "/projetos/biocity",
+  },
+  {
     title: "KOBI",
     kicker: "Branding / Campaign / Architecture",
     image: "/images/projects/kobi.jpg",
-    align: "left",
+    align: "right",
     href: "/projetos/kobi",
   },
   {
-  title: "START",
-  kicker: "Identity / Running / Community",
-  image: "/images/projects/start/start-08.jpg",
-  align: "right",
-  href: "/projetos/start",
-},
+    title: "START",
+    kicker: "Identity / Running / Community",
+    image: "/images/projects/start/start-08.jpg",
+    align: "left",
+    href: "/projetos/start",
+  },
   {
     title: "BRASILIDADES",
     kicker: "Illustration / Visual Culture",
     image: "/images/projects/brasilidades.jpg",
-    align: "left",
+    align: "right",
     href: "/projetos/brasilidades",
   },
   {
     title: "ARGILA",
     kicker: "Product / Still / Materiality",
     image: "/images/projects/argila.jpg",
-    align: "right",
+    align: "left",
     href: "/projetos/argila",
   },
   {
     title: "PIZZA FUN",
     kicker: "Retail / Fashion / Lifestyle",
     image: "/images/projects/pizza-fun.jpg",
-    align: "left",
+    align: "right",
     href: "/projetos/pizza-fun",
   },
 ];
@@ -69,9 +77,18 @@ export default function Home() {
   }
 
   return (
-    <main className={`site-shell ${isLeavingLadoB ? "is-leaving-lado-b" : ""}`}>
+    <main
+      className={`site-shell ${
+        isLeavingLadoB ? "is-leaving-lado-b" : ""
+      }`}
+    >
       <div className="grain" />
-      <div className={`lado-b-transition ${isLeavingLadoB ? "is-active" : ""}`} />
+
+      <div
+        className={`lado-b-transition ${
+          isLeavingLadoB ? "is-active" : ""
+        }`}
+      />
 
       <header className="header">
         <a href="#top" className="nav-link brand">
@@ -111,6 +128,7 @@ export default function Home() {
           loop
           playsInline
         />
+
         <div className="hero-gradient" />
       </section>
 
@@ -128,6 +146,7 @@ export default function Home() {
               alt="Retrato de Guilherme Coelho"
               className="image-treatment"
             />
+
             <div className="red-overlay" />
           </motion.div>
 
@@ -163,6 +182,7 @@ export default function Home() {
           alt="Projeto Argila"
           className="image-treatment"
         />
+
         <div className="dark-overlay" />
       </section>
 
@@ -180,7 +200,10 @@ export default function Home() {
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.55, delay: index * 0.05 }}
+              transition={{
+                duration: 0.55,
+                delay: index * 0.05,
+              }}
               className="project-strip"
             >
               <img
@@ -193,10 +216,15 @@ export default function Home() {
 
               <div
                 className={`project-text ${
-                  project.align === "left" ? "project-left" : "project-right"
+                  project.align === "left"
+                    ? "project-left"
+                    : "project-right"
                 }`}
               >
-                <span className="project-kicker">{project.kicker}</span>
+                <span className="project-kicker">
+                  {project.kicker}
+                </span>
+
                 <span className="pixel-title project-title">
                   {project.title}
                 </span>
@@ -214,7 +242,9 @@ export default function Home() {
           viewport={{ once: true }}
           className="creative-card"
         >
-          <h2 className="pixel-title big-word">Create</h2>
+          <h2 className="pixel-title big-word">
+            Create
+          </h2>
 
           <div className="creative-image">
             <img
@@ -232,7 +262,9 @@ export default function Home() {
           viewport={{ once: true }}
           className="creative-card creative-card-offset"
         >
-          <p className="small-label right-label">creative hub</p>
+          <p className="small-label right-label">
+            creative hub
+          </p>
 
           <div className="creative-image">
             <img
@@ -242,7 +274,9 @@ export default function Home() {
             />
           </div>
 
-          <h2 className="pixel-title big-word colors-word">Colors</h2>
+          <h2 className="pixel-title big-word colors-word">
+            Colors
+          </h2>
         </motion.div>
       </section>
 
@@ -250,7 +284,9 @@ export default function Home() {
         <p>coelhosemjota © creative direction</p>
 
         <div className="footer-links">
-          <a href="mailto:guilherme@coletivobioma.com.br">email</a>
+          <a href="mailto:guilherme@coletivobioma.com.br">
+            email
+          </a>
 
           <a
             href="https://www.instagram.com/coelhosemjota/"
@@ -260,7 +296,9 @@ export default function Home() {
             instagram
           </a>
 
-          <a href="#top">topo</a>
+          <a href="#top">
+            topo
+          </a>
         </div>
       </footer>
     </main>
