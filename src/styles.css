@@ -1897,17 +1897,17 @@ video {
 /* Ajuste de posicionamento — BRASILIDADES na Home */
 
 .project-strip:has(img[src*="brasilidades"]) .project-text {
-  left: 100%;
+  left: 25%;
   right: auto;
   transform: translateX(-50%);
   width: max-content;
-  max-width: 190%;
+  max-width: 130%;
   text-align: left;
   align-items: center;
 }
 
 .project-strip:has(img[src*="brasilidades"]) .project-title {
-  font-size: clamp(60px, 8vw, 125px);
+  font-size: clamp(100px, 8vw, 125px);
   white-space: nowrap;
 }
 
