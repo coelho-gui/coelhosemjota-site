@@ -7,7 +7,7 @@ const biocityImages = [
   { src: "/images/projects/biocity/biocity-02.jpg", alt: "BioCity 02", className: "biocity-five" },
   { src: "/images/projects/biocity/biocity-03.jpg", alt: "BioCity 03", className: "biocity-seven" },
   { src: "/images/projects/biocity/biocity-04.jpg", alt: "BioCity 04", className: "biocity-third" },
-  { src: "/images/projects/biocity/biocity-05.jpg", alt: "BioCity 05", className: "biocity-third" },
+{ type: "video", src: "/videos/biocity/biocity-05.mp4", alt: "Vídeo BioCity 05", className: "biocity-third" },
   { src: "/images/projects/biocity/biocity-06.jpg", alt: "BioCity 06", className: "biocity-third" },
   { src: "/images/projects/biocity/biocity-07.jpg", alt: "BioCity 07", className: "biocity-half" },
   { src: "/images/projects/biocity/biocity-08.jpg", alt: "BioCity 08", className: "biocity-half" },
@@ -18,7 +18,19 @@ const biocityImages = [
 function GalleryImage({ image }) {
   return (
     <figure className={`biocity-gallery-item ${image.className}`}>
-      <img src={image.src} alt={image.alt} loading="lazy" />
+      {image.type === "video" ? (
+        <video
+          src={image.src}
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="metadata"
+          aria-label={image.alt}
+        />
+      ) : (
+        <img src={image.src} alt={image.alt} loading="lazy" />
+      )}
     </figure>
   );
 }
