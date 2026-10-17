@@ -1696,3 +1696,200 @@ video {
     padding: 56px 24px;
   }
 }
+
+/* =========================================
+   BIOCITY CLUB — GALERIA
+========================================= */
+
+.biocity-gallery-section {
+  width: 100%;
+  padding: 40px 0 120px;
+  background: #171717;
+}
+
+.biocity-gallery {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.biocity-gallery-item {
+  margin: 0;
+  overflow: hidden;
+  background: #252525;
+  min-width: 0;
+}
+
+.biocity-gallery-item img,
+.biocity-gallery-item video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s ease;
+}
+
+.biocity-gallery-item:hover img,
+.biocity-gallery-item:hover video {
+  transform: scale(1.035);
+}
+
+/* Larguras */
+
+.biocity-full {
+  grid-column: span 12;
+}
+
+.biocity-five {
+  grid-column: span 5;
+}
+
+.biocity-seven {
+  grid-column: span 7;
+}
+
+.biocity-third {
+  grid-column: span 4;
+}
+
+.biocity-half {
+  grid-column: span 6;
+}
+
+/* Alturas das imagens */
+
+.biocity-full {
+  height: 460px;
+}
+
+.biocity-five,
+.biocity-seven {
+  height: 540px;
+}
+
+.biocity-third {
+  height: 440px;
+}
+
+.biocity-half {
+  height: 650px;
+}
+
+/* Imagem 01 — abertura horizontal */
+
+.biocity-gallery-item:first-child {
+  height: 500px;
+}
+
+/* Imagem 09 — faixa panorâmica */
+
+.biocity-gallery-item:nth-last-child(2) {
+  height: 380px;
+}
+
+/* Imagem 10 — encerramento */
+
+.biocity-gallery-item:last-child {
+  height: 650px;
+}
+
+/* Blocos editoriais vermelhos */
+
+.biocity-text-block {
+  grid-column: span 12;
+  min-height: 420px;
+  padding: 64px;
+  background: #ff3a24;
+  color: #171717;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  gap: 28px;
+}
+
+.biocity-text-block span {
+  font-family: "Space Mono", monospace;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.biocity-text-block p {
+  max-width: 850px;
+  margin: 0;
+  font-family: "Space Mono", monospace;
+  font-size: clamp(17px, 2vw, 26px);
+  line-height: 1.5;
+  letter-spacing: -0.035em;
+}
+
+/* Segundo bloco editorial */
+
+.biocity-text-block:nth-of-type(2) {
+  min-height: 480px;
+}
+
+/* Responsivo — tablet */
+
+@media (max-width: 900px) {
+  .biocity-gallery {
+    padding: 0 20px;
+  }
+
+  .biocity-text-block {
+    padding: 48px;
+    min-height: 360px;
+  }
+}
+
+/* Responsivo — celular */
+
+@media (max-width: 768px) {
+  .biocity-gallery-section {
+    padding: 24px 0 80px;
+  }
+
+  .biocity-gallery {
+    grid-template-columns: 1fr;
+    padding: 0 16px;
+    gap: 8px;
+  }
+
+  .biocity-full,
+  .biocity-five,
+  .biocity-seven,
+  .biocity-third,
+  .biocity-half,
+  .biocity-text-block {
+    grid-column: 1 / -1;
+  }
+
+  .biocity-gallery-item,
+  .biocity-gallery-item:first-child,
+  .biocity-gallery-item:nth-last-child(2),
+  .biocity-gallery-item:last-child {
+    height: auto;
+  }
+
+  .biocity-gallery-item img,
+  .biocity-gallery-item video {
+    height: auto;
+    object-fit: contain;
+  }
+
+  .biocity-text-block,
+  .biocity-text-block:nth-of-type(2) {
+    min-height: 340px;
+    padding: 42px 24px;
+    gap: 24px;
+  }
+
+  .biocity-text-block p {
+    font-size: 17px;
+    line-height: 1.6;
+  }
+}
