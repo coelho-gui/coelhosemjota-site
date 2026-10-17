@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 
 const projects = [
   {
-    title: "BIOCITY CLUB",
+    title: "BIOCITY",
     kicker: "Wayfinding / Environmental Design / Architecture",
     image: "/images/projects/biocity/biocity-banner.jpg",
     align: "left",
