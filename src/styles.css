@@ -1901,8 +1901,8 @@ video {
   right: auto;
   transform: translateX(-50%);
   width: max-content;
-  max-width: 100%;
-  text-align: center;
+  max-width: 140%;
+  text-align: left;
   align-items: center;
 }
 
